@@ -60,8 +60,10 @@ const App = () => {
       }
     } while (handsWithoutPairs / initData.handsNumber > 1 - initData.pairsProbability)
 
+    console.log(hands)
+
     setHands(hands)
-    if (winners.length === 1) setWinner( winners[0] )
+    setWinner(winners.length === 1 ? winners[0] : null)
   }
 
   const createHand = (hands: HandsType): HandType => {
